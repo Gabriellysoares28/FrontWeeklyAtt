@@ -1,0 +1,21 @@
+@media screen and (max-width: 489px) {
+    .p-formgroup-inline {
+        .p-field {
+            margin-bottom: 1em !important;
+        }
+    }
+}
+
+.layout-content .content-section.implementation > h3 {
+    font-weight: 600;
+}
+
+textarea {
+    resize: none;
+}
+body .ui-widget-header{
+    background-color: lightblue;
+    color: black;
+    font-size: 1em;
+    border: 1px solid #41aeff;
+}

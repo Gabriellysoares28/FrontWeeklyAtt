@@ -1,0 +1,50 @@
+<p-table #dt [value]="eventos" dataKey="id" styleClass="ui-table-customers" [rowHover]="true" [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" [paginator]="true" currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} motivos"
+    [filterDelay]="0" [globalFilterFields]="['nome','country.name','representative.name','status']">
+    <ng-template pTemplate="caption">
+        LISTAR EVENTOS <div class="ui-table-globalfilter-container">
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th colspan="2" pSortableColumn="JUSTIFICATIVA ADIANTAMENTO">JUSTIFICATIVA ADIANTAMENTO
+                <p-sortIcon field="JUSTIFICATIVA ADIANTAMENTO"></p-sortIcon>
+            </th>
+            <th colspan="3" pSortableColumn="country.name">ESTADO NA FILA
+                <p-sortIcon field="country.name"></p-sortIcon>
+            </th>
+            <th colspan="2" pSortableColumn="MOTIVO.label">MOTIVO
+                <p-sortIcon field="MOTIVO.name"></p-sortIcon>
+            </th>
+            <th colspan="2" pSortableColumn="DATA">DATA
+                <p-sortIcon field="DATA"></p-sortIcon>
+            </th>
+            <th colspan="2" pSortableColumn="VALOR">VALOR
+                <p-sortIcon field="VALOR"></p-sortIcon>
+            </th>
+            <th colspan="2" pSortableColumn="Nº DE PATROCINADORES">Nº DE PATROCINADORES
+                <p-sortIcon field="Nº DE PATROCINADORES"></p-sortIcon>
+            </th>
+        </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-usuario>
+        <tr class="ui-selectable-row">
+            <td colspan="2">{{usuario.nome}}</td>
+            <td colspan="3">{{usuario.email}}</td>
+            <td colspan="2">{{usuario.cargo}}</td>
+            <td colspan="2">{{usuario.statusAtivo}}</td>
+            <td colspan="2">
+                <a>
+                    <i id="edit" class="material-icons">edit</i>
+                </a>
+                <a>
+                    <i id="delete" class="material-icons">visibility</i>
+                </a>
+            </td>
+        </tr>
+        <tr>
+
+        </tr>
+    </ng-template>
+</p-table>
+

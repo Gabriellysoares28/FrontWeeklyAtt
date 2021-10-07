@@ -1,0 +1,19 @@
+pan {
+    display: flex;
+    align-items:right ;
+}
+
+i {
+    margin-right: .10rem;
+}
+
+h1 {
+    text-align: center;
+}
+button{
+    color: black;
+    text-decoration-style: dashed;
+}
+.ui-button{
+    background-color: chartreuse;
+}
